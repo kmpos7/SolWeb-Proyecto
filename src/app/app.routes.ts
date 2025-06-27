@@ -5,6 +5,8 @@ import { CategoryPageComponent } from './routing/category-page/category-page.com
 import { privateGuard } from './core/auth.guard';
 import { ApplicationLayoutComponent } from './components/application-layout/application-layout.component';
 import { CommunityPageComponent } from './routing/community-page/community-page.component';
+import { HomeComponent } from './routing/home/home.component';
+import { MessagesPageComponent } from './routing/messages-page/messages-page.component';
 
 export const routes: Routes = [
   {
@@ -17,11 +19,11 @@ export const routes: Routes = [
         component: CategoriesComponent,
       },
       {
-        path: 'categories/:id',
+        path: 'categories/:categoryName',
         component: CategoryPageComponent,
       },
       {
-        path: 'game/:id',
+        path: 'game/:name',
         component: GameDetailsComponent,
       },
       {
@@ -31,6 +33,14 @@ export const routes: Routes = [
       {
         path: 'community/:id',
         component: CommunityPageComponent,
+      },
+      {
+        path: '',
+        component: HomeComponent,
+      },
+      {
+        path: 'messages',
+        component: MessagesPageComponent,
       },
     ],
   },
